@@ -28,7 +28,6 @@ public class CameraCaptureComponent {
     public void init() {
         webcam = Webcam.getDefault();
         webcam.open();
-
         executor = Executors.newSingleThreadScheduledExecutor();
         executor.scheduleAtFixedRate(this::captureAndSendImage, 0, 18, TimeUnit.SECONDS);
     }
